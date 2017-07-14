@@ -4,9 +4,9 @@
 
 @implementation NSNotificationCenter (PromiseKit)
 
-+ (AnyPromise *)once:(NSString *)name {
+- (AnyPromise *)observeForName:(NSString *)name {
     return [AnyPromise promiseWithResolverBlock:^(PMKResolver resolve) {
-        __block id identifier = [[NSNotificationCenter defaultCenter] addObserverForName:name object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
+        __block id identifier = [self addObserverForName:name object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
             [[NSNotificationCenter defaultCenter] removeObserver:identifier name:name object:nil];
             resolve(PMKManifold(note, note.userInfo));
         }];

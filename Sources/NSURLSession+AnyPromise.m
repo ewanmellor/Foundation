@@ -13,7 +13,7 @@
 
 @implementation NSURLSession (PromiseKit)
 
-- (AnyPromise *)promiseDataTaskWithRequest:(NSURLRequest *)rq {
+- (AnyPromise *)dataPromiseWithRequest:(NSURLRequest *)rq {
     return [AnyPromise promiseWithResolverBlock:^(PMKResolver resolve) {
         [[self dataTaskWithRequest:rq completionHandler:^(NSData *data, id rsp, NSError *urlError){
             assert(![NSThread isMainThread]);
@@ -29,7 +29,7 @@
                 resolve(error);
             };
 
-            NSStringEncoding (^stringEncoding)() = ^NSStringEncoding{
+            NSStringEncoding (^stringEncoding)(void) = ^{
                 id encodingName = [rsp textEncodingName];
                 if (encodingName) {
                     CFStringEncoding encoding = CFStringConvertIANACharSetNameToEncoding((CFStringRef)encodingName);

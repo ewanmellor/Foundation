@@ -21,7 +21,7 @@
 /**
  Observe the named notification once.
 
-    [NSNotificationCenter once:UIKeyboardWillShowNotification].then(^(id note, id userInfo){
+    [[NSNotificationCenter defaultCenter] observeForName:UIKeyboardWillShowNotification].then(^(id note, id userInfo){
         UIViewAnimationCurve curve = [userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue];
         CGFloat duration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] floatValue];
 
@@ -39,6 +39,6 @@
    1. The NSNotification object.
    2. The NSNotification’s userInfo property.
 */
-+ (AnyPromise *)once:(NSString *)notificationName NS_REFINED_FOR_SWIFT;
+- (AnyPromise *)observeForName:(NSString *)notificationName NS_REFINED_FOR_SWIFT;
 
 @end
