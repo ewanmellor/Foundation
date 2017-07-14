@@ -22,7 +22,7 @@
     id ex = [self expectationWithDescription:@""];
     id rq = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://example.com"]];
 
-    [[NSURLSession sharedSession] promiseDataTaskWithRequest:rq].then(^{
+    [[NSURLSession sharedSession] dataPromiseWithRequest:rq].then(^{
         [ex fulfill];
     });
 
@@ -41,7 +41,7 @@
     id ex = [self expectationWithDescription:@""];
     id rq = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://example.com"]];
 
-    [[NSURLSession sharedSession] promiseDataTaskWithRequest:rq].catch(^(NSError *err){
+    [[NSURLSession sharedSession] dataPromiseWithRequest:rq].catch(^(NSError *err){
         XCTAssertEqualObjects(err.domain, NSCocoaErrorDomain);  //TODO this is why we should replace this domain
         XCTAssertEqual(err.code, 3840);
         XCTAssertEqualObjects(err.userInfo[PMKURLErrorFailingDataKey], stubData);

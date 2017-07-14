@@ -1,9 +1,11 @@
 import PackageDescription
 
-let package = Package(
+let v5 = Version(5,0,0, prereleaseIdentifiers: ["alpha8"])
+
+let pkg = Package(
     name: "PMKFoundation",
     dependencies: [
-        .Package(url: "https://github.com/mxcl/PromiseKit.git", majorVersion: 4)
+        .Package(url: "https://github.com/mxcl/PromiseKit.git", v5)
     ],
     exclude: [
         "Sources/NSNotificationCenter+AnyPromise.m",
@@ -13,3 +15,5 @@ let package = Package(
 		"Tests"  // currently SwiftPM is not savvy to having a single test…
     ]
 )
+
+pkg.swiftLanguageVersions = [3,4]

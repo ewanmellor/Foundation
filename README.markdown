@@ -2,6 +2,10 @@
 
 This project adds promises to Apple’s Foundation framework.
 
+# What Is Available?
+
+Browse the [sources](Sources/), they are quite simple and contain plenty of documentation and examples.
+
 ## CococaPods
 
 ```ruby

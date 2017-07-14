@@ -13,8 +13,12 @@ class NSURLSessionTests: XCTestCase {
 
         let ex = expectation(description: "")
         let rq = URLRequest(url: URL(string: "http://example.com")!)
-        URLSession.shared.dataTask(with: rq).asDictionary().then { rsp -> Void in
-            XCTAssertEqual(json, rsp)
+        firstly {
+            URLSession.shared.dataTask(.promise, with: rq)
+        }.flatMap { data, _ in
+            try JSONSerialization.jsonObject(with: data) as? [String: Any]
+        }.done { rsp in
+            XCTAssertEqual(json, rsp as NSDictionary)
             ex.fulfill()
         }
         waitForExpectations(timeout: 1)
@@ -34,9 +38,9 @@ class NSURLSessionTests: XCTestCase {
         let ex = expectation(description: "")
         let rq = URLRequest(url: URL(string: "http://example.com")!)
 
-        after(interval: 0.1).then {
-            URLSession.shared.dataTask(with: rq)
-        }.then { x -> Void in
+        after(.milliseconds(100)).then {
+            URLSession.shared.dataTask(.promise, with: rq)
+        }.done { x, _ in
             XCTAssertEqual(x, dummy)
             ex.fulfill()
         }
