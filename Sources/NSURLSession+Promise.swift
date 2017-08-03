@@ -80,20 +80,20 @@ extension URLSession {
      [OMGHTTPURLRQ]: https://github.com/mxcl/OMGHTTPURLRQ
      */
     public func dataTask(_: PMKNamespacer, with convertible: URLRequestConvertible) -> Promise<(data: Data, response: URLResponse)> {
-        return Promise { dataTask(with: convertible.pmkRequest, completionHandler: adapter($0)).resume() }
+        return Promise(.pending) { dataTask(with: convertible.pmkRequest, completionHandler: adapter($0)).resume() }
     }
 
     public func uploadTask(_: PMKNamespacer, with convertible: URLRequestConvertible, from data: Data) -> Promise<(data: Data, response: URLResponse)> {
-        return Promise { uploadTask(with: convertible.pmkRequest, from: data, completionHandler: adapter($0)).resume() }
+        return Promise(.pending) { uploadTask(with: convertible.pmkRequest, from: data, completionHandler: adapter($0)).resume() }
     }
 
     public func uploadTask(_: PMKNamespacer, with convertible: URLRequestConvertible, fromFile file: URL) -> Promise<(data: Data, response: URLResponse)> {
-        return Promise { uploadTask(with: convertible.pmkRequest, fromFile: file, completionHandler: adapter($0)).resume() }
+        return Promise(.pending) { uploadTask(with: convertible.pmkRequest, fromFile: file, completionHandler: adapter($0)).resume() }
     }
 
     /// - Remark: we force a `to` parameter because Apple deletes the downloaded file immediately after the underyling completion handler returns.
     public func downloadTask(_: PMKNamespacer, with convertible: URLRequestConvertible, to saveLocation: URL) -> Promise<(saveLocation: URL, response: URLResponse)> {
-        return Promise {
+        return Promise(.pending) {
             downloadTask(with: convertible.pmkRequest, completionHandler: adapter($0)).resume()
         }.map(on: .global(qos: .background)) { tmp, rsp in
             try FileManager.default.moveItem(at: tmp, to: saveLocation)
@@ -114,6 +114,7 @@ extension URL: URLRequestConvertible {
 }
 
 
+#if !os(Linux)
 public extension String {
     /// - Remark: useful when converting a `URLSession` response into a `String`
     init?(data: Data, urlResponse: URLResponse) {
@@ -132,7 +133,7 @@ private extension URLResponse {
         return String.Encoding(rawValue: CFStringConvertEncodingToNSStringEncoding(encoding))
     }
 }
-
+#endif
 
 private func adapter<T, U>(_ seal: Resolver<(data: T, response: U)>) -> (T?, U?, Error?) -> Void {
     return { t, u, e in

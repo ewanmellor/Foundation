@@ -1,6 +1,8 @@
 # PromiseKit Foundation Extensions ![Build Status]
 
-This project adds promises to Apple’s Foundation framework.
+This project adds promises to the Swift Foundation framework.
+
+We support iOS, tvOS, watchOS, macOS and Linux.
 
 ## CococaPods
 

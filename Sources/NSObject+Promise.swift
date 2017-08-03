@@ -25,7 +25,7 @@ extension NSObject {
       - SeeAlso: Apple’s KVO documentation.
     */
     public func observe(_: PMKNamespacer, keyPath: String) -> Guarantee<Any?> {
-        return Guarantee(resolver: { KVOProxy(observee: self, keyPath: keyPath, resolve: $0) })
+        return Guarantee(.pending) { KVOProxy(observee: self, keyPath: keyPath, resolve: $0) }
     }
 }
 
