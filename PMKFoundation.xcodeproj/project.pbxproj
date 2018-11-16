@@ -28,6 +28,55 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		40CC28C5219F6123007E4B34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40CC28BC219F6123007E4B34 /* PromiseKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 63B0AC571D595E1B00FA21D9;
+			remoteInfo = PromiseKit;
+		};
+		40CC28C7219F6123007E4B34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40CC28BC219F6123007E4B34 /* PromiseKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 631751A81D59766500A9DDDC;
+			remoteInfo = "PMKA+Tests";
+		};
+		40CC28C9219F6123007E4B34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40CC28BC219F6123007E4B34 /* PromiseKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6314113C1D59795700E24B9E;
+			remoteInfo = PMKBridgeTests;
+		};
+		40CC28CB219F6123007E4B34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40CC28BC219F6123007E4B34 /* PromiseKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 630019221D596292003B4E30;
+			remoteInfo = PMKCoreTests;
+		};
+		40CC28CD219F6123007E4B34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40CC28BC219F6123007E4B34 /* PromiseKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 633027EA203CC0060037E136;
+			remoteInfo = PMKDeprecatedTests;
+		};
+		40CC28CF219F6123007E4B34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40CC28BC219F6123007E4B34 /* PromiseKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C0244E622047A6CB00ACB4AC;
+			remoteInfo = "PMKJSA+Tests";
+		};
+		40CC28D1219F612D007E4B34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40CC28BC219F6123007E4B34 /* PromiseKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 63B0AC561D595E1B00FA21D9;
+			remoteInfo = PromiseKit;
+		};
 		63C7FFF81D5C020D003BAE60 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 63C7FF9E1D5BEE09003BAE60 /* Project object */;
@@ -38,6 +87,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		40CC28BC219F6123007E4B34 /* PromiseKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PromiseKit.xcodeproj; path = ../../PromiseKit.xcodeproj; sourceTree = "<group>"; };
 		6364F66C1D68B8DF008D7B94 /* NSNotificationCenter+AnyPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNotificationCenter+AnyPromise.h"; path = "Sources/NSNotificationCenter+AnyPromise.h"; sourceTree = SOURCE_ROOT; };
 		6364F66D1D68B8DF008D7B94 /* NSTask+AnyPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSTask+AnyPromise.h"; path = "Sources/NSTask+AnyPromise.h"; sourceTree = SOURCE_ROOT; };
 		6364F66E1D68B8DF008D7B94 /* NSURLSession+AnyPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURLSession+AnyPromise.h"; path = "Sources/NSURLSession+AnyPromise.h"; sourceTree = SOURCE_ROOT; };
@@ -82,9 +132,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40CC28BD219F6123007E4B34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40CC28C6219F6123007E4B34 /* PromiseKit.framework */,
+				40CC28C8219F6123007E4B34 /* PMKA+Tests.xctest */,
+				40CC28CA219F6123007E4B34 /* PMKBridgeTests.xctest */,
+				40CC28CC219F6123007E4B34 /* PMKCoreTests.xctest */,
+				40CC28CE219F6123007E4B34 /* PMKDeprecatedTests.xctest */,
+				40CC28D0219F6123007E4B34 /* PMKJSA+Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		63C7FF9D1D5BEE09003BAE60 = {
 			isa = PBXGroup;
 			children = (
+				40CC28BC219F6123007E4B34 /* PromiseKit.xcodeproj */,
 				63C700091D5C0253003BAE60 /* Info.plist */,
 				63CCF8121D5C0C4E00503216 /* Cartfile */,
 				63CCF8131D5C0C4E00503216 /* Cartfile.private */,
@@ -163,6 +227,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				40CC28D2219F612D007E4B34 /* PBXTargetDependency */,
 			);
 			name = PMKFoundation;
 			productName = "PMK+UIKit";
@@ -219,6 +284,12 @@
 			mainGroup = 63C7FF9D1D5BEE09003BAE60;
 			productRefGroup = 63C7FFA81D5BEE09003BAE60 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 40CC28BD219F6123007E4B34 /* Products */;
+					ProjectRef = 40CC28BC219F6123007E4B34 /* PromiseKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				63C7FFA61D5BEE09003BAE60 /* PMKFoundation */,
@@ -226,6 +297,51 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		40CC28C6219F6123007E4B34 /* PromiseKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PromiseKit.framework;
+			remoteRef = 40CC28C5219F6123007E4B34 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		40CC28C8219F6123007E4B34 /* PMKA+Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "PMKA+Tests.xctest";
+			remoteRef = 40CC28C7219F6123007E4B34 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		40CC28CA219F6123007E4B34 /* PMKBridgeTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PMKBridgeTests.xctest;
+			remoteRef = 40CC28C9219F6123007E4B34 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		40CC28CC219F6123007E4B34 /* PMKCoreTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PMKCoreTests.xctest;
+			remoteRef = 40CC28CB219F6123007E4B34 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		40CC28CE219F6123007E4B34 /* PMKDeprecatedTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PMKDeprecatedTests.xctest;
+			remoteRef = 40CC28CD219F6123007E4B34 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		40CC28D0219F6123007E4B34 /* PMKJSA+Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "PMKJSA+Tests.xctest";
+			remoteRef = 40CC28CF219F6123007E4B34 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		639447051D5D011300DDAE3C /* Embed Carthage Frameworks */ = {
@@ -277,6 +393,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		40CC28D2219F612D007E4B34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PromiseKit;
+			targetProxy = 40CC28D1219F612D007E4B34 /* PBXContainerItemProxy */;
+		};
 		63C7FFF91D5C020D003BAE60 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 63C7FFA61D5BEE09003BAE60 /* PMKFoundation */;
