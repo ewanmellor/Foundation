@@ -10,10 +10,6 @@
 		6364F66F1D68B8DF008D7B94 /* NSNotificationCenter+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 6364F66C1D68B8DF008D7B94 /* NSNotificationCenter+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6364F6701D68B8DF008D7B94 /* NSTask+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 6364F66D1D68B8DF008D7B94 /* NSTask+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6364F6711D68B8DF008D7B94 /* NSURLSession+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 6364F66E1D68B8DF008D7B94 /* NSURLSession+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		63C700031D5C021F003BAE60 /* TestNSNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C7FFFD1D5C021F003BAE60 /* TestNSNotificationCenter.swift */; };
-		63C700041D5C021F003BAE60 /* TestNSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C7FFFE1D5C021F003BAE60 /* TestNSObject.swift */; };
-		63C700051D5C021F003BAE60 /* TestNSTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C7FFFF1D5C021F003BAE60 /* TestNSTask.swift */; };
-		63C700081D5C021F003BAE60 /* TestNSURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C700021D5C021F003BAE60 /* TestNSURLSession.swift */; };
 		63C7FFDC1D5C00F2003BAE60 /* afterlife.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C7FFCE1D5C00F2003BAE60 /* afterlife.swift */; };
 		63C7FFDE1D5C00F2003BAE60 /* NSNotificationCenter+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C7FFD01D5C00F2003BAE60 /* NSNotificationCenter+AnyPromise.m */; };
 		63C7FFDF1D5C00F2003BAE60 /* NSNotificationCenter+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C7FFD11D5C00F2003BAE60 /* NSNotificationCenter+Promise.swift */; };
@@ -23,8 +19,6 @@
 		63C7FFE81D5C00F2003BAE60 /* NSURLSession+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C7FFDA1D5C00F2003BAE60 /* NSURLSession+AnyPromise.m */; };
 		63C7FFE91D5C00F2003BAE60 /* NSURLSession+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C7FFDB1D5C00F2003BAE60 /* NSURLSession+Promise.swift */; };
 		63C7FFED1D5C00FD003BAE60 /* PMKFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 63C7FFEB1D5C00FD003BAE60 /* PMKFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		63C7FFF71D5C020D003BAE60 /* PMKFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C7FFA71D5BEE09003BAE60 /* PMKFoundation.framework */; };
-		63CAF1061D682F9600D3835B /* TestNSURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CAF1051D682F9600D3835B /* TestNSURLSession.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,13 +71,6 @@
 			remoteGlobalIDString = 63B0AC561D595E1B00FA21D9;
 			remoteInfo = PromiseKit;
 		};
-		63C7FFF81D5C020D003BAE60 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 63C7FF9E1D5BEE09003BAE60 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 63C7FFA61D5BEE09003BAE60;
-			remoteInfo = PMKFoundation;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -103,7 +90,6 @@
 		63C7FFDA1D5C00F2003BAE60 /* NSURLSession+AnyPromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURLSession+AnyPromise.m"; path = "Sources/NSURLSession+AnyPromise.m"; sourceTree = SOURCE_ROOT; };
 		63C7FFDB1D5C00F2003BAE60 /* NSURLSession+Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSURLSession+Promise.swift"; path = "Sources/NSURLSession+Promise.swift"; sourceTree = SOURCE_ROOT; };
 		63C7FFEB1D5C00FD003BAE60 /* PMKFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMKFoundation.h; path = Sources/PMKFoundation.h; sourceTree = SOURCE_ROOT; };
-		63C7FFF21D5C020D003BAE60 /* PMKNSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PMKNSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C7FFFD1D5C021F003BAE60 /* TestNSNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestNSNotificationCenter.swift; path = Tests/TestNSNotificationCenter.swift; sourceTree = SOURCE_ROOT; };
 		63C7FFFE1D5C021F003BAE60 /* TestNSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestNSObject.swift; path = Tests/TestNSObject.swift; sourceTree = SOURCE_ROOT; };
 		63C7FFFF1D5C021F003BAE60 /* TestNSTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestNSTask.swift; path = Tests/TestNSTask.swift; sourceTree = SOURCE_ROOT; };
@@ -118,14 +104,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		63C7FFEF1D5C020D003BAE60 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				63C7FFF71D5C020D003BAE60 /* PMKFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,7 +141,6 @@
 			isa = PBXGroup;
 			children = (
 				63C7FFA71D5BEE09003BAE60 /* PMKFoundation.framework */,
-				63C7FFF21D5C020D003BAE60 /* PMKNSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -234,24 +211,6 @@
 			productReference = 63C7FFA71D5BEE09003BAE60 /* PMKFoundation.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		63C7FFF11D5C020D003BAE60 /* PMKNSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 63C7FFFA1D5C020D003BAE60 /* Build configuration list for PBXNativeTarget "PMKNSTests" */;
-			buildPhases = (
-				63C7FFEE1D5C020D003BAE60 /* Sources */,
-				63C7FFEF1D5C020D003BAE60 /* Frameworks */,
-				639447051D5D011300DDAE3C /* Embed Carthage Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				63C7FFF91D5C020D003BAE60 /* PBXTargetDependency */,
-			);
-			name = PMKNSTests;
-			productName = PMKTests/NS;
-			productReference = 63C7FFF21D5C020D003BAE60 /* PMKNSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -263,11 +222,6 @@
 				ORGANIZATIONNAME = "Max Howell";
 				TargetAttributes = {
 					63C7FFA61D5BEE09003BAE60 = {
-						CreatedOnToolsVersion = 8.0;
-						LastSwiftMigration = 0900;
-						ProvisioningStyle = Automatic;
-					};
-					63C7FFF11D5C020D003BAE60 = {
 						CreatedOnToolsVersion = 8.0;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
@@ -293,7 +247,6 @@
 			projectRoot = "";
 			targets = (
 				63C7FFA61D5BEE09003BAE60 /* PMKFoundation */,
-				63C7FFF11D5C020D003BAE60 /* PMKNSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -343,25 +296,6 @@
 		};
 /* End PBXReferenceProxy section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		639447051D5D011300DDAE3C /* Embed Carthage Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				PromiseKit,
-				OHHTTPStubs,
-			);
-			name = "Embed Carthage Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "case \"$PLATFORM_NAME\" in\nmacosx) plat=Mac;;\niphone*) plat=iOS;;\nwatch*) plat=watchOS;;\nappletv*) plat=tvOS;;\n*) echo \"error: Unknown PLATFORM_NAME: $PLATFORM_NAME\"; exit 1;;\nesac\nfor (( n = 0; n < SCRIPT_INPUT_FILE_COUNT; n++ )); do\nVAR=SCRIPT_INPUT_FILE_$n\nframework=$(basename \"${!VAR}\")\nexport SCRIPT_INPUT_FILE_$n=\"$SRCROOT\"/Carthage/Build/$plat/\"$framework\".framework\ndone\n\n/usr/local/bin/carthage copy-frameworks || exit\n\nfor (( n = 0; n < SCRIPT_INPUT_FILE_COUNT; n++ )); do\nVAR=SCRIPT_INPUT_FILE_$n\nsource=${!VAR}.dSYM\ndest=${BUILT_PRODUCTS_DIR}/$(basename \"$source\")\nditto \"$source\" \"$dest\" || exit\ndone";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		63C7FFA21D5BEE09003BAE60 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -378,18 +312,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		63C7FFEE1D5C020D003BAE60 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				63C700051D5C021F003BAE60 /* TestNSTask.swift in Sources */,
-				63C700031D5C021F003BAE60 /* TestNSNotificationCenter.swift in Sources */,
-				63C700081D5C021F003BAE60 /* TestNSURLSession.swift in Sources */,
-				63CAF1061D682F9600D3835B /* TestNSURLSession.m in Sources */,
-				63C700041D5C021F003BAE60 /* TestNSObject.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -397,11 +319,6 @@
 			isa = PBXTargetDependency;
 			name = PromiseKit;
 			targetProxy = 40CC28D1219F612D007E4B34 /* PBXContainerItemProxy */;
-		};
-		63C7FFF91D5C020D003BAE60 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 63C7FFA61D5BEE09003BAE60 /* PMKFoundation */;
-			targetProxy = 63C7FFF81D5C020D003BAE60 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -564,33 +481,6 @@
 			};
 			name = Release;
 		};
-		63C7FFFB1D5C020D003BAE60 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SUPPRESS_WARNINGS = YES;
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
-		63C7FFFC1D5C020D003BAE60 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SUPPRESS_WARNINGS = YES;
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -608,15 +498,6 @@
 			buildConfigurations = (
 				63C7FFB01D5BEE09003BAE60 /* Debug */,
 				63C7FFB11D5BEE09003BAE60 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		63C7FFFA1D5C020D003BAE60 /* Build configuration list for PBXNativeTarget "PMKNSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				63C7FFFB1D5C020D003BAE60 /* Debug */,
-				63C7FFFC1D5C020D003BAE60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
